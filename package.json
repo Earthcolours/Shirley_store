@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "dom4": "^2.1.6",
+    "react-router": "^7.2.0"
+  }
+}
