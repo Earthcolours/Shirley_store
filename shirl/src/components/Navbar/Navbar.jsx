@@ -8,8 +8,9 @@ import { Link, Links } from 'react-router';
 
 const Navbar = () => {
 
-  const [menu, setMenu] = useState("Home");
-  
+  const [menu, setMenu] = useState("Shop");
+  const {getTotalCartItems} = useContext(ShopContext);
+
   return (
     <div className='navbar'>
       <div className='nav-logo'>
@@ -17,21 +18,21 @@ const Navbar = () => {
         <p> Shirl's Sport Store </p>
       </div>
       <ul className="nav-menu">
-        <li onClick={()=>{setMenu("home")}}> 
-          <Link style={{textDecoration: 'none'}} to='/'> Home </Link> 
-          {menu ==="home"?<hr/>:<></>}
+        <li onClick={()=>{setMenu("shop")}}> 
+          <Link style={{textDecoration: 'none'}} to='/'> Shop </Link> 
+          {menu ==="shop"?<hr/>:<></>}
            </li>
-        <li onClick={()=>{setMenu("about")}}>
-          <Link style={{textDecoration: 'none'}} to='/about'> About </Link>
-           {menu ==="about"?<hr/>:<></>}
+        <li onClick={()=>{setMenu("laliga")}}>
+          <Link style={{textDecoration: 'none'}} to='/laliga'> La Liga </Link>
+           {menu ==="laliga"?<hr/>:<></>}
             </li>
-        <li onClick={()=>{setMenu("contact")}}>
-          <Link style={{textDecoration: 'none'}} to='/contact'> Contact </Link>
+        <li onClick={()=>{setMenu("seriea")}}>
+          <Link style={{textDecoration: 'none'}} to='/seriea'> Serie-A </Link>
           {menu ==="contact"?<hr/>:<></>}
            </li>
-        <li onClick={()=>{setMenu("shop")}}>
-          <Link style={{textDecoration: 'none'}} to='Shop'> Shop </Link>
-          {menu ==="shop"?<hr/>:<></>} 
+        <li onClick={()=>{setMenu("premierleague")}}>
+          <Link style={{textDecoration: 'none'}} to='premierleague'> premierleague </Link>
+          {menu ==="premierleague"?<hr/>:<></>} 
           </li>
       </ul>
       <div className="nav-login-cart">
@@ -39,8 +40,8 @@ const Navbar = () => {
           <Link style={{textDecoration: 'none'}} to='/loginsignup'> Login </Link>
           </button>
         <img src={cart_icon} alt="icon of a cart" />
-        <div className="nav-cart-count"> 
-          <Link style={{textDecoration: 'none'}} to='/cart'> 0 </Link> 
+        <div className="nav-cart-count">
+          <Link style={{textDecoration: 'none'}} to='/cart'> {getTotalCartItems} </Link> 
           </div>
       </div>
     </div>

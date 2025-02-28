@@ -1,10 +1,21 @@
 import React from "react";
-import './CSS/Shop.css';
+import Hero from "../components/Hero/Hero";
+import Popular from "../components/Popular/Popular";
+import Offers from '../components/Offers/Offers';
+import NewCollections from "../components/NewCollections/NewCollections";
+import NewsLetter from "../components/NewsLetter/NewLetter";
+import Footer from '../components/Footer/Footer';
+
 
 const Shop = () =>{
     return(
-        <div className="Shop">
-
+        <div>
+            <Hero />
+            <Popular />
+            <Offers />
+            <NewCollections />
+            <NewsLetter />
+            <Footer />
         </div>
     )
 }

@@ -1,7 +1,7 @@
-.items{
+.item{
     width: 350px;
 }
-.items p{
+.item p{
     margin: 6px 0px;
 }
 .item-prices{
@@ -18,7 +18,7 @@
     font-size: 18px;
     font-weight: 500;
 }
-.items:hover{
+.item:hover{
     transform: scale(1.05);
     transition: 0.6;
 }
