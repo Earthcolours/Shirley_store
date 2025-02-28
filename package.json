@@ -1,6 +1,10 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "dom4": "^2.1.6",
     "react-router": "^7.2.0"
+=======
+    "web-vitals": "^4.2.4"
+>>>>>>> 3df3475006712efffa9a3e35c16fc7457d2f2e31
   }
 }
